@@ -1,6 +1,8 @@
 import React from "react";
 import { CssVarsProvider } from "@mui/joy/styles";
-import Login from "./containers/auth/login";
+
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router";
 
 function App() {
   return (
@@ -13,9 +15,11 @@ function App() {
       // set as root provider
       // disableNestedContext
     >
-      <div className="">
+      {/* <div className="">
         <Login />
-      </div>
+      </div> */}
+
+      <RouterProvider router={router} />
     </CssVarsProvider>
   );
 }
